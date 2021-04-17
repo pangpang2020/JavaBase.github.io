@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/pangpang2020/JavaBase.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pangpang2020/JavaBase.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## 字符&编码
+### 基本概念
+- 字符
+- 字符集
+- 字符编码   
+字符集和字符编码一般都是成对出现的，如ASCII、IOS-8859-1、GB2312、GBK，都是即表示了字符集又表示了对应的字符编码。Unicode比较特殊，有多重字符编码（UTF-8，UTF16）
+## 常见字符集及编码
+1. ASCII字符集&编码   
+  - American Standard code for information interchange       
+  - 128个字符： 33个控制字符（大部分废弃） 95个可现实字符      
+  - 一个8位二进制数，最高位是0 ，可用为7位：三位 * 四位 = 16 * 4 =128    
+  - **0** -48 **a** -97 **A** -65
+  - Unicode GBXXXX UTF-8 都兼容ASCII
+  - EASCII是对ASCII的扩展 7位变8位 共256个字符，多了表格符号 计算符号，希腊字母与特殊的拉丁符号
+  ---
+2. GB2312   
+ - GB 23212或GB 2312-80是简体中文字符集**信息交换用汉子编码字符集基本集 又称GB0，收录6763个汉字**   
+ - 不能覆盖人名古汉语的罕用字和繁体字
+ - 区位码 
+     - 01-09区 特殊符号
+     - 16-55区 一级汉字 拼音排序（3755个）
+     - 56-87区 二级汉字 不收笔画排序（3008个）
+    **例如** “啊”字位于16区01位
+    **每个汉字由2个字节表示** 高位字节+低位字节
+    占用的码位72* 94=6768 有五个空位
+4. GBK 
+   - 汉子内码扩展规范GBK
+   - K表示扩展的Kuo 声母K
+   - 英文全程Chinese Internal Code Extension Specification
+   - 拥有23940共收入21886个汉字和图形符号
+   - 向下兼容GB 2312-80，但不支持韩国字，相比与此Unicode支持。
+6. GB 18030   
+   
+8. Unicode  
+ 
+10. UTF-8   
